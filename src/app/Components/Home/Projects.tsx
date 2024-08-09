@@ -7,7 +7,7 @@ const Projects = () => {
     <section
       className="bg-white px-5 py-[3rem] flex flex-col gap-5"
       id="Projects"
-    >
+     >
       <div className="text-center flex flex-col gap-5">
         <h1 className="text-purple-800 font-bold text-[3rem]">Projects</h1>
         <p className="text-purple-800 font-semibold">
@@ -20,7 +20,7 @@ const Projects = () => {
       </div>
       {/* Projects */}
       <div className="w-[100%] py-5 grid sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-3 md:m-auto lg:pb-0">
-      {/* flex flex-col lg:flex-row gap-3 items-center justify-around */}
+        {/* flex flex-col lg:flex-row gap-3 items-center justify-around */}
         {/* Dream House */}
         <div className="flex">
           {/* Card */}
@@ -237,7 +237,7 @@ const Projects = () => {
               </div>
               <p className="text-black ">
                 This is a list of projects completed so far, with links to host
-                them. 
+                them.
               </p>
 
               {/* View */}

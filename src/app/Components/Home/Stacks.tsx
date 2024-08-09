@@ -7,7 +7,7 @@ const Stacks = () => {
     <section className="bg-white py-[1rem] lg:py-[4rem] flex flex-col lg:flex-row items-center gap-[5rem] justify-around px-5">
         <div>
             <p className="text-purple-800 font-bold text-[2rem]">Tech Stacks & Tools</p>
-            <p className="text-pink-600 font-semibold">These are some of the Tech  <br /> Stacks & Tools I'm experienced in.</p>
+            <p className="text-pink-600 font-semibold">These are some of the Tech  <br /> Stacks & Tools I&apos;m experienced in.</p>
         </div>
       <div className="shadow-2xl p-5 flex flex-col gap-[3rem] items-center rounded-xl bg-purple-50">
         <h1 className="text-purple-800 font-bold lg:text-[2rem]">Stacks</h1>

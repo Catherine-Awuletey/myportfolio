@@ -12,15 +12,15 @@ const About = () => {
           LET ME <span className="text-purple-950">INTRODUCE</span> MYSELF
         </h1>
         <div className="py-3 flex flex-col gap-3">
-          <p className=" font-semibold text-purple-950">Hi, I'm Cattie!</p>
+          <p className="font-semibold text-purple-950">Hi, I&apos;m Cattie!</p>
           <p className="text-purple-800">
-            I'm a front-end developer passionate about turning design ideas into
+            I&apos;m a front-end developer passionate about turning design ideas into
             interactive web experiences. With expertise in HTML, CSS, React.js,
             and Next.js, I create responsive and engaging interfaces.
           </p>
           <p className="font-semibold text-purple-950">My Background</p>
           <p className="text-purple-800">
-            I'm a Computer Engineering graduate with a solid foundation in web
+            I&apos;m a Computer Engineering graduate with a solid foundation in web
             development who enjoys solving design challenges with clean and
             efficient code.
           </p>
@@ -38,7 +38,7 @@ const About = () => {
         {/* Socials */}
         <div className="flex flex-col items-center gap-2">
           <div className="text-purple-800">
-            <p className="text-pink-600">Let's Connect</p>
+            <p className="text-pink-600">Let&apos;s Connect</p>
           </div>
           <div className="flex gap-2">
           <a href="https://github.com/Catherine-Awuletey" className="hover:text-gray-300 text-white">

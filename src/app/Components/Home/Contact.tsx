@@ -39,7 +39,7 @@ function ContactForm() {
         className="max-w-lg mx-auto p-6 bg-pink-50 rounded-lg shadow-2xl"
       >
         <h2 className="text-2xl font-bold mb-6 text-pink-500">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <div className="mb-4">
           <label className="block text-purple-700 mb-2" htmlFor="name">
