@@ -9,13 +9,13 @@ import Link from "next/link";
 const Nav = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
-  const getMenuStyles = (menuOpened) => {
+  const getMenuStyles = (menuOpened: boolean) => {
     if (document.documentElement.clientWidth <= 800) {
       return { right: menuOpened ? "0" : "-100%" };
     }
     return { right: "0" };
   };
-
+  
   return (
     <nav className="p-4 bg-white relative">
       <div className="container mx-auto flex justify-between items-center">
