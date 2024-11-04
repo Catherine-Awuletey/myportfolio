@@ -1,21 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import OutsideClickHandler from "react-outside-click-handler";
 import Image from "next/image";
 import Link from "next/link";
 
 const Nav = () => {
+  const [menuStyles, setMenuStyles] = useState({ right: "0" });
   const [menuOpened, setMenuOpened] = useState(false);
 
+  useEffect(() => {
+    // This will only run on the client side
+    if (menuOpened && typeof document !== 'undefined') {
+      setMenuStyles({ right: document.documentElement.clientWidth <= 800 ? "0" : "-100%" });
+    }
+  }, [menuOpened]);
+  
   const getMenuStyles = (menuOpened: boolean) => {
-    if (document.documentElement.clientWidth <= 800) {
+    if (typeof document !== 'undefined' && document.documentElement.clientWidth <= 800) {
       return { right: menuOpened ? "0" : "-100%" };
     }
     return { right: "0" };
   };
-  
+    
   return (
     <nav className="p-4 bg-white relative">
       <div className="container mx-auto flex justify-between items-center">
