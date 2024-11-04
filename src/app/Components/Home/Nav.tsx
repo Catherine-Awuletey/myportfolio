@@ -7,23 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Nav = () => {
-  const [menuStyles, setMenuStyles] = useState({ right: "0" });
   const [menuOpened, setMenuOpened] = useState(false);
+  const [menuStyles, setMenuStyles] = useState({ right: "-100%" }); // Start off-screen
 
   useEffect(() => {
-    // This will only run on the client side
-    if (menuOpened && typeof document !== 'undefined') {
-      setMenuStyles({ right: document.documentElement.clientWidth <= 800 ? "0" : "-100%" });
+    // Update menu styles based on state and screen size
+    if (typeof document !== "undefined") {
+      setMenuStyles({
+        right: menuOpened && document.documentElement.clientWidth <= 800 ? "0" : "-100%",
+      });
     }
   }, [menuOpened]);
-  
-  const getMenuStyles = (menuOpened: boolean) => {
-    if (typeof document !== 'undefined' && document.documentElement.clientWidth <= 800) {
-      return { right: menuOpened ? "0" : "-100%" };
-    }
-    return { right: "0" };
-  };
-    
+
   return (
     <nav className="p-4 bg-white relative">
       <div className="container mx-auto flex justify-between items-center">
@@ -46,8 +41,8 @@ const Nav = () => {
         {/* Navigation Links */}
         <OutsideClickHandler onOutsideClick={() => setMenuOpened(false)}>
           <div
-            style={getMenuStyles(menuOpened)}
-            className="fixed top-0 right-0 w-[60%] bg-white transition-all duration-300 lg:static lg:w-auto lg:h-auto lg:flex lg:gap-8"
+            style={menuStyles}
+            className="fixed top-1 right-0 w-[60%] rounded-md bg-purple-50 transition-all duration-400 lg:static lg:w-auto lg:h-auto lg:flex lg:gap-8"
           >
             <ul className="flex flex-col p-4 lg:p-0 lg:flex-row gap-4 items-center lg:gap-8 text-lg">
               <li className="hover:text-gray-400">
@@ -84,11 +79,6 @@ const Nav = () => {
 };
 
 export default Nav;
-
-
-
-
-
 
 
 // "use client";
